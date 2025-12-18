@@ -20,13 +20,22 @@ public class TopDownCharacterController : MonoBehaviour
     
     //The direction that the player is moving in.
     private Vector2 m_playerDirection;
-   
+    private Vector2 m_lastDirection;
+
+    private float m_fireTimeout = 0;
 
     [Header("Movement parameters")]
     //The speed at which the player moves
     [SerializeField] private float m_playerSpeed = 200f;
     //The maximum speed the player can move
     [SerializeField] private float m_playerMaxSpeed = 1000f;
+
+    [Header("Projectile Components")]
+    [SerializeField] private GameObject m_projectilePrefab;
+    [SerializeField] private Transform m_firePoint;
+    [SerializeField] private float m_projectileSpeed;
+
+    [SerializeField] float m_fireRate;
 
     #endregion
 
@@ -85,14 +94,37 @@ public class TopDownCharacterController : MonoBehaviour
         {
             m_animator.SetFloat("Horizontal", m_playerDirection.x);
             m_animator.SetFloat("Vertical", m_playerDirection.y);
+
+            m_lastDirection = m_playerDirection;
         }
 
         // check if an attack has been triggered.
-        if (m_attackAction.IsPressed())
+        if (m_attackAction.IsPressed() && Time.time > m_fireTimeout)
         {
             // just log that an attack has been registered for now
             // we will look at how to do this in future sessions.
-            Debug.Log("Attack!");
+            //Debug.Log("Attack!");
+            m_fireTimeout = Time.time + m_fireRate;
+            Fire();
         }
+    }
+
+    private void Fire()
+    {
+        Vector2 fireDirection = m_lastDirection;
+        if (fireDirection == Vector2.zero)
+        {
+            fireDirection = Vector2.down;
+        }
+
+        GameObject spawnedprojectile = Instantiate(m_projectilePrefab, m_firePoint.position, Quaternion.identity);
+        Rigidbody2D projectileRB = spawnedprojectile.GetComponent<Rigidbody2D>();
+        if (projectileRB != null)
+        {
+            projectileRB.AddForce(m_playerDirection.normalized * m_projectileSpeed, ForceMode2D.Impulse);
+        }
+
+        Vector3 mousePointOnScreen =
+            Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
     }
 }
