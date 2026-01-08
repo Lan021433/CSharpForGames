@@ -3,7 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour
 {
-    public void AddScore(int m_score)
+    public ScoreSystem m_scoreSystem;
+    private int m_score;
+
+    public void AddScore()
     {
         m_score += 10;
     }
