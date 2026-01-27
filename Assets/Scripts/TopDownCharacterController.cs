@@ -12,7 +12,8 @@ public class TopDownCharacterController : MonoBehaviour
     #region Framework Variables
 
     //The inputs that we need to retrieve from the input system.
-    
+    private InputAction m_moveAction;
+    private InputAction m_attackAction;
 
     private InputAction m_rollAction;
 
@@ -39,6 +40,9 @@ public class TopDownCharacterController : MonoBehaviour
 
     [SerializeField] float m_fireRate;
 
+    [Header("Lighting Parameters")]
+    [SerializeField] private Transform m_flashLight;
+
     #endregion
 
     /// <summary>
@@ -48,7 +52,8 @@ public class TopDownCharacterController : MonoBehaviour
     private void Awake()
     {
         //bind movement inputs to variables
-        
+        m_moveAction = InputSystem.actions.FindAction("Move");
+        m_attackAction = InputSystem.actions.FindAction("Attack");
 
         m_rollAction = InputSystem.actions.FindAction("Jump");
         
@@ -86,7 +91,7 @@ public class TopDownCharacterController : MonoBehaviour
     void Update()
     {
         // store any movement inputs into m_playerDirection - this will be used in FixedUpdate to move the player.
-
+        m_playerDirection = m_moveAction.ReadValue<Vector2>();
         
         // ~~ handle animator ~~
         // Update the animator speed to ensure that we revert to idle if the player doesn't move.
@@ -104,14 +109,19 @@ public class TopDownCharacterController : MonoBehaviour
             }
 
             m_lastDirection = m_playerDirection;
+
+            float angle = Mathf.Atan2(m_playerDirection.y, m_playerDirection.x) * Mathf.Rad2Deg;
+            m_flashLight.rotation = Quaternion.Euler(0, 0, angle - 90);
         }
 
         // check if an attack has been triggered.
-      
+      if (m_attackAction.IsPressed() && Time.time > m_fireTimeout)
         {
             // just log that an attack has been registered for now
             // we will look at how to do this in future sessions.
-            //Debug.Log("Attack!");
+            Debug.Log("Attack!");
+            m_fireTimeout = Time.time + m_fireRate;
+            Fire();
         }
     }
 
@@ -135,24 +145,5 @@ public class TopDownCharacterController : MonoBehaviour
         Vector2 mousePos = Input.mousePosition;
     }
 
-    public void HandleAttack(InputAction.CallbackContext ctx)
-    {
-        if (ctx.performed && Time.time > m_fireTimeout)
-        {
-            m_fireTimeout = Time.time + m_fireTimeout;
-            Fire();
-        }
-    }
-
-    public void HandleMove(InputAction.CallbackContext ctx)
-    {
-        if (ctx.performed)
-        {
-            m_playerDirection = ctx.ReadValue<Vector2>();
-        }
-        else if (ctx.canceled)
-        {
-            m_playerDirection = Vector2.zero;
-        }
-    }
+    
 }
