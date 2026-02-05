@@ -137,7 +137,7 @@ public class TopDownCharacterController : MonoBehaviour
         Rigidbody2D projectileRB = spawnedprojectile.GetComponent<Rigidbody2D>();
         if (projectileRB != null)
         {
-            projectileRB.AddForce(m_playerDirection.normalized * m_projectileSpeed, ForceMode2D.Impulse);
+            projectileRB.AddForce(fireDirection.normalized * m_projectileSpeed, ForceMode2D.Impulse);
         }
 
         Vector3 mousePointOnScreen =
