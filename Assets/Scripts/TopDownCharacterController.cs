@@ -121,7 +121,7 @@ public class TopDownCharacterController : MonoBehaviour
             // we will look at how to do this in future sessions.
             Debug.Log("Attack!");
             m_fireTimeout = Time.time + m_fireRate;
-            Fire();
+            
         }
     }
 
