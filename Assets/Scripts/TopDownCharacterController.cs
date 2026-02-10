@@ -115,14 +115,14 @@ public class TopDownCharacterController : MonoBehaviour
         }
 
         // check if an attack has been triggered.
-      if (m_attackAction.IsPressed() && Time.time > m_fireTimeout)
+        if (m_attackAction.IsPressed() && Time.time > m_fireTimeout)
         {
             // just log that an attack has been registered for now
             // we will look at how to do this in future sessions.
             Debug.Log("Attack!");
             m_fireTimeout = Time.time + m_fireRate;
             Fire();
-        }
+        }     
     }
 
     private void Fire()
@@ -141,8 +141,9 @@ public class TopDownCharacterController : MonoBehaviour
         }
 
         Vector3 mousePointOnScreen =
-            Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-        Vector2 mousePos = Input.mousePosition;
+            Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePointOnScreen.z = 0;
+        Vector2 shootDirection = (mousePointOnScreen - m_firePoint.position).normalized;
     }
         
 }
