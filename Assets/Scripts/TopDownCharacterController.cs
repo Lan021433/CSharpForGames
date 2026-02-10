@@ -122,7 +122,7 @@ public class TopDownCharacterController : MonoBehaviour
             Debug.Log("Attack!");
             m_fireTimeout = Time.time + m_fireRate;
             Fire();
-        }     
+        }
     }
 
     private void Fire()
@@ -141,9 +141,8 @@ public class TopDownCharacterController : MonoBehaviour
         }
 
         Vector3 mousePointOnScreen =
-            Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePointOnScreen.z = 0;
-        Vector2 shootDirection = (mousePointOnScreen - m_firePoint.position).normalized;
-    }
-        
+            Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector3 ShootDirection = mousePointOnScreen - transform.position;
+    } 
+    
 }
