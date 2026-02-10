@@ -144,6 +144,5 @@ public class TopDownCharacterController : MonoBehaviour
             Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector2 mousePos = Input.mousePosition;
     }
-
-    
+        
 }
