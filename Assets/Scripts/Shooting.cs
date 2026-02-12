@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class shooting : MonoBehaviour
 {
-    public GameObject m_projectile;
-    public Transform m_firePoint;
-    public float m_bulletSpeed = 50;
-    public float m_fireRate;
+    [SerializeField] private GameObject m_projectile;
+    [SerializeField] private Transform m_firePoint;
+    [SerializeField] private float m_bulletSpeed = 50;
+    [SerializeField] private float m_fireRate;
     private float m_fireTimeout = 0;
 
     Vector2 lookDirection;
@@ -34,6 +34,7 @@ public class shooting : MonoBehaviour
             m_fireTimeout = Time.time + m_fireRate;
             GameObject bulletClone = Instantiate(m_projectile);
             bulletClone.transform.position = m_firePoint.position;
+
             //setting the bullet clones to face the look angle position
             bulletClone.transform.rotation = Quaternion.Euler(0, 0, lookAngle);
 

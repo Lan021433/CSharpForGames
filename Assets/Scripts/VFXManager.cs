@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class VFXManager : MonoBehaviour
 {
@@ -21,5 +22,5 @@ public class VFXManager : MonoBehaviour
         GameObject explosion = Instantiate(s_instance.m_explosionPrefab, position, Quaternion.identity);
         Destroy(explosion, destroyAfter);
         return explosion;
-    }        
+    }   
 }

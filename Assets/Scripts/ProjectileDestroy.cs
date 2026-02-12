@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ProjectileDamage : MonoBehaviour
+public class ProjectileDestroy : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {

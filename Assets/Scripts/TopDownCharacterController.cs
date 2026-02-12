@@ -17,6 +17,8 @@ public class TopDownCharacterController : MonoBehaviour
 
     private InputAction m_rollAction;
 
+    private InputAction m_meleeAttack;
+
     //The components that we need to edit to make the player move smoothly.
     private Animator m_animator;
     private Rigidbody2D m_rigidbody;
@@ -56,6 +58,8 @@ public class TopDownCharacterController : MonoBehaviour
         m_attackAction = InputSystem.actions.FindAction("Attack");
 
         m_rollAction = InputSystem.actions.FindAction("Jump");
+
+        m_meleeAttack = InputSystem.actions.FindAction("Melee");
         
         //get components from Character game object so that we can use them later.
         m_animator = GetComponent<Animator>();
@@ -106,6 +110,11 @@ public class TopDownCharacterController : MonoBehaviour
             if (m_rollAction.IsPressed())
             {
                 m_animator.SetTrigger("Rolling");
+            }
+
+            if (m_meleeAttack.IsPressed())
+            {
+                m_animator.SetTrigger("Attacking");
             }
 
             m_lastDirection = m_playerDirection;

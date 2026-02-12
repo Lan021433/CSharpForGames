@@ -17,4 +17,9 @@ public class Health : MonoBehaviour
     {
         m_healthBar.fillAmount = m_currentHealth / m_maxHealth;
     }
+    public void Damage(int damage)
+    {
+        m_currentHealth -= damage;
+        Debug.Log("Player - OW!");
+    }
 }

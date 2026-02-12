@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4638065429208458455}
   - component: {fileID: 5185108076225285649}
   - component: {fileID: -1045338726488084103}
-  - component: {fileID: -3712567496846812427}
+  - component: {fileID: -5478968593527339}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Player
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dba917b87bf84ad488bf818860edd00d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-3712567496846812427
+--- !u!114 &-5478968593527339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7131268113433091809}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a382ce84fab257f4a8eb9e3eadad0100, type: 3}
+  m_Script: {fileID: 11500000, guid: c6aaa818dd475e346a4d4bf84c1abf8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_bulletDamage: 50
