@@ -7,9 +7,14 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject m_controlsPanel;
     private bool m_controlsPanelOpen = false;
 
-    public void Play()
+    public void PlayLevel1()
     {
-        SceneManager.LoadScene("DevelopmentScene");
+        SceneManager.LoadScene("StudentLevel");
+    }
+
+    public void PlayLevel2()
+    {
+        SceneManager.LoadScene("CatacombsRealLevel");
     }
 
     public void ToggleControlsPanel()

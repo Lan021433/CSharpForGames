@@ -35,6 +35,7 @@ public class MeleeAttack : MonoBehaviour
                     enemy.GetComponent<EnemyHealth>().Damage(m_attackDamage);
                 }
                 m_cooldownTimer = m_cooldownTime;
+                AnimateAttack();
             }
         }
         else
