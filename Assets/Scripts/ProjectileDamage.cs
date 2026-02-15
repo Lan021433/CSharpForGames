@@ -6,6 +6,7 @@ public class ProjectileDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        //when an enemy tag enters the collider, the enemyhealth code is called to remove damage from the enemy's health
         if (other.gameObject.tag == "Enemy")
         {
             other.gameObject.GetComponent<EnemyHealth>().Damage(m_bulletDamage);

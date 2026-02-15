@@ -14,6 +14,8 @@ public class shooting : MonoBehaviour
 
     private InputAction m_attackAction;
 
+    public AudioSource m_shotSound;
+
     private void Awake()
     {
         m_attackAction = InputSystem.actions.FindAction("Attack");
@@ -33,6 +35,7 @@ public class shooting : MonoBehaviour
         {
             m_fireTimeout = Time.time + m_fireRate;
             GameObject bulletClone = Instantiate(m_projectile);
+            m_shotSound.Play();
             bulletClone.transform.position = m_firePoint.position;
 
             //setting the bullet clones to face the look angle position

@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject m_controlsPanel;
     private bool m_controlsPanelOpen = false;
 
+    //the two play level void will run the first and second respectively
     public void PlayLevel1()
     {
         SceneManager.LoadScene("StudentLevel");
@@ -17,6 +18,7 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("CatacombsRealLevel");
     }
 
+    //uses booleans in order to toggle on and off an extra panel on the main menu
     public void ToggleControlsPanel()
     {
         if (m_controlsPanelOpen)
@@ -32,8 +34,15 @@ public class MenuManager : MonoBehaviour
         m_controlsPanelOpen = !m_controlsPanelOpen;
     }
 
+    //only usuable in the build - ends the application
     public void Quit()
     {
         Application.Quit();
+    }
+
+    //will load the main menu scene
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
     }
 }

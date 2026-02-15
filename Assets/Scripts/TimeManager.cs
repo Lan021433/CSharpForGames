@@ -6,6 +6,16 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private float m_timer;
     [SerializeField] private TMPro.TextMeshProUGUI m_timerText;
 
+    [SerializeField] private GameObject m_winscreenPanel;
+
+    [SerializeField] private AudioSource m_winSound;
+
+    //sets the win screen to false at the start of the level
+    private void Start()
+    {
+        m_winscreenPanel.SetActive(false);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -17,6 +27,10 @@ public class TimeManager : MonoBehaviour
         else if (m_timer < 0)
         {
             m_timer = 0;
+            //plays the wins ound and activates the win screen
+            m_winSound.Play();
+            m_winscreenPanel.SetActive(true);
+            Time.timeScale = 0f;
         }
 
         //used to set the visual layout of the timer

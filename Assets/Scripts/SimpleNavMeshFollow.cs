@@ -6,13 +6,13 @@ public class SimpleNavMeshFollow : MonoBehaviour
     public Transform m_target;
     NavMeshAgent m_agent;
         
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    // Start sets what the m_angent actually is to the engine
     void Start()
     {
         m_agent = GetComponent<NavMeshAgent>();
     }
 
-    // Update is called once per frame
+    // Update will constantly make the enemy target the player's position
     void Update()
     {
         m_agent.SetDestination(m_target.position);

@@ -14,6 +14,8 @@ public class MeleeAttack : MonoBehaviour
     [SerializeField] private float m_cooldownTime = 0.5f;
     [SerializeField] private float m_cooldownTimer = 0;
 
+    [SerializeField] private AudioSource m_meleeSound;
+
     public Animator m_Animator;
 
     private void Awake()
@@ -29,6 +31,8 @@ public class MeleeAttack : MonoBehaviour
             if (m_Melee.IsPressed())
             {
                 Debug.Log("MeleePressed");
+                m_meleeSound.Play();
+                //collider line checks for the enemies int he attackrange and will deal damage to all in range through the enmy health script;
                 Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(m_meleeOrigin.position, m_attackRange, m_attackLayer);
                 foreach (var enemy in enemiesInRange)
                 {
@@ -38,12 +42,14 @@ public class MeleeAttack : MonoBehaviour
                 AnimateAttack();
             }
         }
+        //starts the attack cooldown
         else
         {
             m_cooldownTimer -= Time.deltaTime;
         }
     }
 
+    //allows me to see the attack range gizmo in the editor
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(m_meleeOrigin.position, m_attackRange);

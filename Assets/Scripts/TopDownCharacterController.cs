@@ -152,6 +152,8 @@ public class TopDownCharacterController : MonoBehaviour
         Vector3 mousePointOnScreen =
             Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector3 ShootDirection = mousePointOnScreen - transform.position;
+        float rotZ = Mathf.Atan2(ShootDirection.y, ShootDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rotZ);
     } 
     
 }
