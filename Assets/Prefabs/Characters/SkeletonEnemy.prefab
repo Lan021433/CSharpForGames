@@ -204,7 +204,6 @@ GameObject:
   - component: {fileID: 5962040162819765713}
   - component: {fileID: 5807638455902411276}
   - component: {fileID: 8227243543396007040}
-  - component: {fileID: 2572375246437855656}
   - component: {fileID: 7782405684697036192}
   m_Layer: 6
   m_Name: SkeletonSquare
@@ -352,21 +351,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.7355603, y: 0.7152264}
   m_EdgeRadius: 0
---- !u!114 &2572375246437855656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6065598867578483071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_maxHealth: 100
-  m_animator: {fileID: 5962040162819765713}
-  m_enemydeathSound: {fileID: 7782405684697036192}
 --- !u!82 &7782405684697036192
 AudioSource:
   m_ObjectHideFlags: 0
@@ -477,6 +461,7 @@ GameObject:
   - component: {fileID: 8084036126564843781}
   - component: {fileID: 9988942920507084}
   - component: {fileID: 8076989260511758174}
+  - component: {fileID: 7292564524712462705}
   m_Layer: 6
   m_Name: SkeletonEnemy
   m_TagString: Enemy
@@ -593,3 +578,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.3897357, y: 1.6100209}
   m_EdgeRadius: 0
+--- !u!114 &7292564524712462705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374483855130999854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHealth: 100
+  m_animator: {fileID: 5962040162819765713}
+  m_enemydeathSound: {fileID: 7782405684697036192}

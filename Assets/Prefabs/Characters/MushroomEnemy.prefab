@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8901147179898728441}
   - component: {fileID: 1715141746383598681}
   - component: {fileID: 448064579920025028}
+  - component: {fileID: 6341402225258565198}
   m_Layer: 6
   m_Name: MushroomEnemy
   m_TagString: Enemy
@@ -129,6 +130,21 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1.6535206}
   m_EdgeRadius: 0
+--- !u!114 &6341402225258565198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504611342395862081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHealth: 100
+  m_animator: {fileID: 8453339649684865198}
+  m_enemydeathSound: {fileID: 2275501485709186511}
 --- !u!1 &6106297753077102109
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,7 +348,6 @@ GameObject:
   - component: {fileID: 1437537170042417343}
   - component: {fileID: 8453339649684865198}
   - component: {fileID: 2561155451734644758}
-  - component: {fileID: 2650770099834469659}
   - component: {fileID: 9135060902447535323}
   - component: {fileID: 2275501485709186511}
   m_Layer: 6
@@ -435,21 +450,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2650770099834469659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8530383986411626595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_maxHealth: 100
-  m_animator: {fileID: 8453339649684865198}
-  m_enemydeathSound: {fileID: 2275501485709186511}
 --- !u!61 &9135060902447535323
 BoxCollider2D:
   m_ObjectHideFlags: 0

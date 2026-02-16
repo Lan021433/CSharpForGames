@@ -137,7 +137,6 @@ GameObject:
   - component: {fileID: 6440049673756140701}
   - component: {fileID: 2863480501530265248}
   - component: {fileID: 7402719483030569056}
-  - component: {fileID: 5411039101276659104}
   - component: {fileID: 8262346249076583318}
   - component: {fileID: 7296395162615479619}
   m_Layer: 6
@@ -241,21 +240,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5411039101276659104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4072773726833506973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_maxHealth: 100
-  m_animator: {fileID: 2863480501530265248}
-  m_enemydeathSound: {fileID: 7296395162615479619}
 --- !u!61 &8262346249076583318
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -412,6 +396,7 @@ GameObject:
   - component: {fileID: 2462256201986392896}
   - component: {fileID: 6277562850452855865}
   - component: {fileID: 8339964180139225288}
+  - component: {fileID: 3185678895436301221}
   m_Layer: 6
   m_Name: FlyingEyeEnemy
   m_TagString: Enemy
@@ -528,3 +513,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.1123238, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3185678895436301221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6748744437882822727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHealth: 100
+  m_animator: {fileID: 2863480501530265248}
+  m_enemydeathSound: {fileID: 7296395162615479619}

@@ -203,7 +203,6 @@ GameObject:
   - component: {fileID: 9191450423055962780}
   - component: {fileID: 2699868870615429936}
   - component: {fileID: 7391810809584356152}
-  - component: {fileID: 802804015651741912}
   - component: {fileID: 8115021322228395781}
   - component: {fileID: 7541556741760260262}
   m_Layer: 6
@@ -330,21 +329,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6, y: 0.6}
   m_EdgeRadius: 0
---- !u!114 &802804015651741912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4368674672723086926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_maxHealth: 100
-  m_animator: {fileID: 8115021322228395781}
-  m_enemydeathSound: {fileID: 7541556741760260262}
 --- !u!95 &8115021322228395781
 Animator:
   serializedVersion: 7
@@ -477,6 +461,7 @@ GameObject:
   - component: {fileID: 696075433076271962}
   - component: {fileID: 6810507007701785167}
   - component: {fileID: 8691454441861407345}
+  - component: {fileID: 7486518237279158895}
   m_Layer: 6
   m_Name: GoblinEnemy
   m_TagString: Enemy
@@ -593,3 +578,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.0641916, y: 1.1497806}
   m_EdgeRadius: 0
+--- !u!114 &7486518237279158895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826399088292296334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b4b079bd9238c40a0dd6dfcb507490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_maxHealth: 100
+  m_animator: {fileID: 8115021322228395781}
+  m_enemydeathSound: {fileID: 7541556741760260262}
