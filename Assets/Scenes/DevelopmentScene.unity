@@ -11187,7 +11187,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.01
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -31225,6 +31225,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_healthBar: {fileID: 1445613158}
   m_maxHealth: 100
+  m_deathscreenPanel: {fileID: 0}
+  m_deathSound: {fileID: 0}
+  m_healingSound: {fileID: 0}
 --- !u!114 &1343588125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31352,6 +31355,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8d1972c2-7096-44e4-9401-47e17103df4a
+    m_ActionName: 'Player/Melee[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -36394,7 +36401,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.35, y: 0.38}
+    oldSize: {x: 1.5, y: 1.5}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -41307,7 +41314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1533036987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41354,7 +41361,7 @@ MonoBehaviour:
   m_BuildHeightMesh: 0
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 43860918d4558b54f8c850941aefbb80, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 59bdbaf489e98c347bf64ded5a113309, type: 2}
 --- !u!4 &1533036989
 Transform:
   m_ObjectHideFlags: 0
@@ -41388,7 +41395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1534784732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43858,7 +43865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1689085208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54931,7 +54938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8509915751558893781, guid: 9051199f3ad47b44ab30f8f1d6260663, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
