@@ -26,5 +26,6 @@ public class DetectionArea : MonoBehaviour
     public void AnimateAttackAnim()
     {
         m_animator.SetTrigger("Attack");
+        m_animator.SetBool("CanAttack", true);
     }
 }

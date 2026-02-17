@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EnemyType: {fileID: 1633581121791682163}
-  m_WaveTimer: 8
+  m_WaveTimer: 12
 --- !u!4 &149063780
 Transform:
   m_ObjectHideFlags: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EnemyType: {fileID: 3914850147098716322}
-  m_WaveTimer: 10
+  m_WaveTimer: 20
 --- !u!1 &269633038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3464,13 +3464,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 91772d1700da6ef4ba5708935c9d36a8, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 652824237}
+        m_TargetAssemblyTypeName: WinAndDeathScreenManager, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3831,7 +3831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EnemyType: {fileID: 3055040089389569269}
-  m_WaveTimer: 20
+  m_WaveTimer: 60
 --- !u!1 &391182183
 GameObject:
   m_ObjectHideFlags: 0
@@ -5518,7 +5518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44096eb36a8a3447a9cd12709b75466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_timer: 90
+  m_timer: 180
   m_timerText: {fileID: 1366568030}
   m_winscreenPanel: {fileID: 542591599}
   m_winSound: {fileID: 935302293}
@@ -6090,9 +6090,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 91772d1700da6ef4ba5708935c9d36a8, type: 3}
-        m_TargetAssemblyTypeName: UnityEditor.MonoScript, UnityEditor.CoreModule
-        m_MethodName: 
+      - m_Target: {fileID: 652824237}
+        m_TargetAssemblyTypeName: WinAndDeathScreenManager, Assembly-CSharp
+        m_MethodName: PlayLevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23559,13 +23559,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 91772d1700da6ef4ba5708935c9d36a8, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 652824237}
+        m_TargetAssemblyTypeName: WinAndDeathScreenManager, Assembly-CSharp
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23692,13 +23692,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 91772d1700da6ef4ba5708935c9d36a8, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 652824237}
+        m_TargetAssemblyTypeName: WinAndDeathScreenManager, Assembly-CSharp
+        m_MethodName: PlayLevel1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -44168,7 +44168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EnemyType: {fileID: 1189983092683730945}
-  m_WaveTimer: 30
+  m_WaveTimer: 60
 --- !u!1 &1965656525
 GameObject:
   m_ObjectHideFlags: 0
